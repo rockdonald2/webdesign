@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body,
+.cover {
+    height: 100%;
+}
+
+.cover {
+    background: linear-gradient(#353b482f, #2f364048), url('img/cover.jpg') bottom center/cover no-repeat;
+    display: table;
+    width: 100%;
+    padding: 0 20%;
+    box-shadow: inset 0 0 100px #000;
+}
+
+.cover-text {
+    text-align: center;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cover-text h1 {
+    margin: 0;
+    font-size: 70px;
+    letter-spacing: -3px;
+}
+
+nav.bg-dark {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.cover-text .lead {
+    margin: 45px 0;
+}
+
+.testimonial {
+    background: #222;   
+}
+
+blockquote {
+    border: none;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 32px;
+    color: #fff;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+}
+
+section {
+    padding: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 60px;
+}
+
+h2 + p {
+    text-align: center;
+    margin-top: -60px;
+}
+
+#why-us {
+    background-color: #555;
+    color: #ccc;
+}
+
+#why-us h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#team {
+    background: linear-gradient(rgba(34, 34, 34, 0.767), rgba(0, 0, 0, 0.705)), url('img/fan.jpg') top left/cover no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+#team h4 {
+    margin: 25px 0;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer a {
+    color: hotpink;
+}
+
+@media only screen and (max-width: 768px) {
+
+    section {
+        padding: 20px;
+    }
+
+}
