@@ -1,0 +1,20 @@
+{
+  "name": "minimalism",
+  "version": "1.0.0",
+  "description": "Minimalism landing page",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss style.css -w",
+    "watch:sass-subpage": "node-sass subpages/main.scss subpages/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver",
+    "start-subpage": "npm-run-all --parallel watch:sass-subpage devserver"
+  },
+  "author": "Lukacs Zsolt",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

@@ -1,0 +1,141 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  transition: all .2s; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  grid-template-rows: 15vh 50vh 1fr;
+  background: #1F3A93;
+  box-shadow: inset 5px 5px 100px 1px rgba(0, 0, 0, 0.5); }
+
+.navbar {
+  grid-row: 1 / 3;
+  grid-column: 2 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+  .navbar--brand {
+    height: 15vh; }
+    .navbar--brand a {
+      font-size: 4.6rem;
+      font-family: "Daniel", serif;
+      cursor: default;
+      color: #D3D3D3; }
+  .navbar--list {
+    list-style: none; }
+    .navbar--list__item a {
+      text-decoration: none;
+      color: #D3D3D3;
+      font-size: 2.3rem;
+      font-weight: 500; }
+      .navbar--list__item a:hover {
+        color: #E26A6A; }
+    .navbar--list__item:not(:last-child) {
+      margin-bottom: 3.4rem; }
+
+.active {
+  color: #E26A6A !important; }
+
+.message {
+  grid-column: 5 / -2;
+  grid-row: 2 / 3;
+  font-size: 7.2rem;
+  font-family: "Daniel", serif;
+  color: #D3D3D3;
+  padding-top: 5rem; }
+
+.stats {
+  grid-row: 3 / -1;
+  grid-column: 2 / -1;
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly; }
+
+.shape svg {
+  width: 14rem;
+  height: 14rem;
+  transition: all .5s; }
+  .shape svg:hover {
+    transform: rotate(360deg); }
+
+.shape--3 svg:hover {
+  transform: scale(1.1); }
+
+.num {
+  font-size: 9.6rem;
+  color: #E26A6A;
+  margin-top: -7.5rem;
+  margin-left: 4rem; }
+
+.text {
+  color: #D3D3D3;
+  font-size: 2.3rem;
+  text-align: center;
+  max-width: 25rem; }
+
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%; } }
+
+@media only screen and (max-width: 46.875em) {
+  .navbar {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1; }
+    .navbar--brand a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem; }
+    .navbar--list {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center; }
+      .navbar--list__item:not(:last-child) {
+        margin-bottom: 0; }
+  .message {
+    grid-column: 2 / -2;
+    align-self: center;
+    text-align: center; } }
+
+@media only screen and (max-width: 37.5em) {
+  .message {
+    font-size: 5.6rem; } }
+
+@media only screen and (max-width: 25em) {
+  .stats {
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2rem; }
+  .shape svg {
+    width: 8rem;
+    height: 8rem; }
+  .num {
+    font-size: 8.2rem; }
+  .text {
+    font-size: 2rem;
+    max-width: 20rem; }
+  .navbar {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1; }
+    .navbar--brand a {
+      font-size: 4rem; }
+    .navbar--list__item a {
+      font-size: 2rem; }
+  .message {
+    padding-top: 0;
+    font-size: 4.6rem; } }
