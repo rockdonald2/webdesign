@@ -1,0 +1,51 @@
+@mixin respond($bp) {
+    @media only screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Merriweather", serif;
+}
+
+$color-primary: #fff;
+$color-secondary: #91938b;
+$color-tertiary: #343332;
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color-tertiary, .6);
+    z-index: 50;
+    transition: all .2s;
+}
+
+.hide {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.show {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.slide-in {
+    left: 0 !important;
+}

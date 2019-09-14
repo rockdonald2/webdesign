@@ -1,0 +1,38 @@
+@mixin hide {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+@mixin show($display) {
+    display: $display !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@mixin respond($bp) {
+    @media only screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+.nav-slide-in {
+    transform: translateX(0) !important;
+    z-index: 50 !important;
+}
+
+.nav-slide-out {
+    transform: translateX(-50rem) !important;
+    z-index: 50 !important;
+}
+
+.search-slide-in {
+    transform: translateY(-1rem) !important;
+    z-index: 50 !important;
+    opacity: 1 !important;
+}
+
+.cart-slide-in {
+    transform: translateX(0) !important;
+    z-index: 50 !important;
+}

@@ -1,0 +1,62 @@
+.project-container {
+    margin-top: 5rem;
+    padding: 5rem;
+    background-color: $color-primary;
+}
+
+.projects {
+    display: flex;
+
+    @include respond(600px) {
+        flex-direction: column;
+    }
+}
+
+.project {
+    &:not(:last-child) {
+        margin-right: 2rem;
+
+        @include respond(600px) {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &--heading {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 2.6rem;
+        color: $color-secondary;
+        text-align: center;
+        width: 75%;
+        margin: 1rem auto 0 auto;
+
+        @include respond(650px) {
+            font-size: 2rem;
+        }
+    }
+
+    a {
+        font-size: 1.3rem;
+        letter-spacing: .2rem;
+        color: $color-secondary;
+        text-align: center;
+        width: 75%;
+        display: block;
+        margin: 1rem auto 0 auto;
+        text-transform: uppercase;
+
+        @include respond(650px) {
+            font-size: 1rem;
+        }
+    }
+}

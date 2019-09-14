@@ -1,0 +1,42 @@
+.event-container {
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(650px) {
+        flex-direction: column;
+    }
+}
+
+.event {
+    &--left,
+    &--right {
+        img {
+            width: 100%;
+        }
+
+        text-align: center;
+
+        h3 {
+            font-size: 3.2rem;
+            font-weight: 400;
+            margin: 2rem 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+
+    &--left {
+        margin-right: 2rem;
+
+        @include respond(650px) {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}

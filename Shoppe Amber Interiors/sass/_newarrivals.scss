@@ -1,0 +1,103 @@
+.newarrivals-container {
+    padding: 7.5rem 2rem 2rem 2rem;
+}
+
+.newarrivals {
+    &--img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(650px) {
+            flex-direction: column;
+            margin-top: 5rem;
+        }
+
+        &__1,
+        &__2,
+        &__3,
+        &__4 {
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        &__1 {
+            &:hover {
+                .icofont-pinterest__1 {
+                    display: inline;
+                }
+            }
+        }
+
+        &__2 {
+            &:hover {
+                .icofont-pinterest__2 {
+                    display: inline;
+                }
+            }
+        }
+
+        &__3 {
+            &:hover {
+                .icofont-pinterest__3 {
+                    display: inline;
+                }
+            }
+        }
+
+        &__4 {
+            &:hover {
+                .icofont-pinterest__4 {
+                    display: inline;
+                }
+            }
+        }
+        
+        img {
+            width: 90%;
+        }
+
+        .icofont-heart-alt {
+            font-size: 1.8rem;
+            position: absolute;
+            top: 5%;
+            right: 10%;
+
+            &:hover {
+                color: rgba(red, .7);
+            }
+        }
+
+        .icofont-pinterest {
+            font-size: 1.8rem;
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: none;
+        }
+    }
+
+    &--text {
+        text-align: center;
+        padding: 4rem 0;
+
+        h4 {
+            font-size: 2.6rem;
+            color: $color-secondary;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        a {
+            font-size: 10px;
+            letter-spacing: .2rem;
+            color: $color-secondary;
+            text-transform: uppercase;
+        }
+    }
+}

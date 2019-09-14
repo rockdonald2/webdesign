@@ -1,0 +1,59 @@
+.portfolio-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem;
+    background-color: $color-primary;
+
+    @include respond(650px) {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    img {
+        max-width: 100%;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+}
+
+.portfolio {
+    &--left,
+    &--right {
+        text-align: center;
+        color: $color-secondary;
+        width: 50%;
+        position: relative;
+
+        @include respond(650px) {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 4rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            height: 7rem;
+
+            @include respond(650px) {
+                height: initial;
+                max-width: 40rem;
+                margin: 0 auto;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &--left {
+        margin-right: 2rem;
+
+        @include respond(650px) {
+            margin-right: 0;
+            margin-bottom: 5rem;
+        }
+    }
+}

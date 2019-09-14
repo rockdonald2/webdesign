@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+            content="ie=edge">
+        <link rel="shortcut icon"
+            href="//cdn.shopify.com/s/files/1/0233/8069/files/ShoppeAmberInteriors-TertiaryLogo-Off-Black-RGB-HiRes-_1_32x32.png?v=1548185747"
+            type="image/x-icon">
+        <title>Shoppe Amber Interiors</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="css/icofont/icofont.min.css">
+        <link rel="stylesheet"
+            href="css/style.css">
+    </head>
+
+    <body>
+        <div class="backdrop"></div>
+
+        <header class="main-header">
+            <nav class="navbar">
+                <div class="navbar--hamburger hide">
+                    <label for="navbar--hamburger"><i class="icofont-navigation-menu mobile--close"></i></label>
+                    <input type="checkbox"
+                        name="navbar--hamburger"
+                        id="navbar--hamburger"
+                        style="display: none;"
+                        class="navbar__checkbox">
+                    <div class="mobile--wrapper">
+                        <input type="checkbox"
+                            name="mobile--close"
+                            id="mobile--close"
+                            style="display: none;"
+                            class="mobile__checkbox">
+                        <label for="mobile--close"><i class="icofont-close mobile--close"></i></label>
+                        <ul class="mobile--list">
+                            <li class="mobile--item"><input type="text"
+                                    class="mobile--search"
+                                    placeholder="Search for a product"></li>
+                            <li class="mobile--item mobile--item--shop accordion"><a href="#"
+                                    class="label">Shop</a><i class="icofont-thin-down"></i></li>
+                            <div class="mobile--item__shop panel">
+                                <ul class="mobile--item__shop--products">
+                                    <li class="mobile--item__shop--product">New arrivals</li>
+                                    <li class="mobile--item__shop--product">Furniture</li>
+                                    <li class="mobile--item__shop--product">Pillows</li>
+                                    <li class="mobile--item__shop--product">Rugs</li>
+                                    <li class="mobile--item__shop--product">Decor</li>
+                                    <li class="mobile--item__shop--product">Apothecary</li>
+                                    <li class="mobile--item__shop--product">Kitchen & dining</li>
+                                    <li class="mobile--item__shop--product">Bed & bath</li>
+                                    <li class="mobile--item__shop--product">Art</li>
+                                    <li class="mobile--item__shop--product">Lighting</li>
+                                    <li class="mobile--item__shop--product">Vintage</li>
+                                    <li class="mobile--item__shop--product">Outdoor</li>
+                                    <li class="mobile--item__shop--product">Sale</li>
+                                </ul>
+                            </div>
+                            <li class="mobile--item mobile--item--mbs accordion"><a href="#"
+                                    class="label">Made by Shoppe</a><i class="icofont-thin-down"></i></li>
+                            <div class="mobile--item__mbs panel">
+                                <ul class="mobile--item__mbs--items">
+                                    <li class="mobile--item__mbs--item">All</li>
+                                    <li class="mobile--item__mbs--item">Essentials by amber lewis</li>
+                                    <li class="mobile--item__mbs--item">Seating</li>
+                                    <li class="mobile--item__mbs--item">Beds</li>
+                                    <li class="mobile--item__mbs--item">Dining tables</li>
+                                    <li class="mobile--item__mbs--item">Accent tables</li>
+                                    <li class="mobile--item__mbs--item">Wallpaper</li>
+                                </ul>
+                            </div>
+                            <li class="mobile--item"><a href="#">Lookbook</a></li>
+                            <li class="mobile--item"><a href="#">Log in</a></li>
+                            <li class="mobile--item"><a href="#">My Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="navbar--left">
+                    <li class="navbar--item"><a href="#">Shop</a></li>
+                    <li class="navbar--item"><a href="#">Made by Shoppe</a></li>
+                    <li class="navbar--item"><a href="#">Visit Us</a></li>
+                    <li class="navbar--item"><a href="#">Lookbook</a></li>
+                </ul>
+                <div class="navbar--brand">
+                    <img src="img/brand.webp"
+                        alt="Shoppe Brand Logo">
+                </div>
+                <div class="navbar--cart">
+                    <label for="navbar--cart" class="navbar--cartIcon hide"><i class="icofont-cart-alt"></i></label>
+                    <input type="checkbox"
+                        name="navbar--cart"
+                        id="navbar--cart"
+                        style="display: none;"
+                        class="navbar__cart">
+                    <div class="cart--wrapper">
+                        <div class="first-line">
+                            <h6>My Cart (0)</h6>
+                            <input type="checkbox"
+                                name="cart--close"
+                                id="cart--close"
+                                style="display: none;"
+                                class="cart__close">
+                            <label for="cart--close">CLOSE</label>
+                        </div>
+                        <div class="cart--list"></div>
+                        <div class="cart--info">
+                            <div class="subtotal">
+                                <p>Subtotal</p>
+                                <small>&dollar; 0.00</small>
+                            </div>
+                            <div class="checkout">
+                                <a href="#">VIEW CART & CHECKOUT</a>
+                            </div>
+                            <div class="note">
+                                <small>Shipping, Taxes & Handling fees will be calculated at the checkout</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar--right">
+                    <li class="navbar--item"><a class="search-btn">Search</a></li>
+                    <li class="navbar--item"><a href="#">Log in</a></li>
+                    <li class="navbar--item"><a class="cart-btn">My Cart</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search for a product">
+                <label for="search__bar"><i class="icofont-close search--close"></i></label>
+                <input type="checkbox"
+                    class="search__close"
+                    name="search__close"
+                    id="search__bar"
+                    style="display: none;">
+            </div>
+        </header>
+
+        <section class="slideshow-container">
+            <div class="caption">
+                <h3 class="caption--title"
+                    id="title">Shoppe the Look</h3>
+                <p class="caption--text"
+                    id="text">Introducing Amber's latest project, "Client Canyon Cool," a Los Angeles canyon family
+                    home styled with some of our favorite Shoppe pieces.</p>
+                <a href="#"
+                    class="caption--link">VIEW COLLECTION</a>
+            </div>
+            <div class="dots">
+                <ul>
+                    <li><span class="dot dot-active">&nbsp;</span></li>
+                    <li><span class="dot">&nbsp;</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="newarrivals-container">
+            <div class="newarrivals--img">
+                <div class="newarrivals--img__1">
+                    <img src="img/photo-3.webp"
+                        alt="New Arrival 1">
+                    <i class="icofont-heart-alt"></i>
+                    <i class="icofont-pinterest icofont-pinterest__1"></i>
+                </div>
+                <div class="newarrivals--img__2">
+                    <img src="img/photo-4.webp"
+                        alt="New Arrival 2">
+                    <i class="icofont-heart-alt"></i>
+                    <i class="icofont-pinterest icofont-pinterest__2"></i>
+                </div>
+                <div class="newarrivals--img__3">
+                    <img src="img/photo-5.webp"
+                        alt="New Arrival 3">
+                    <i class="icofont-heart-alt"></i>
+                    <i class="icofont-pinterest icofont-pinterest__3"></i>
+                </div>
+                <div class="newarrivals--img__4">
+                    <img src="img/photo-6.webp"
+                        alt="New Arrival 4">
+                    <i class="icofont-heart-alt"></i>
+                    <i class="icofont-pinterest icofont-pinterest__4"></i>
+                </div>
+            </div>
+            <div class="newarrivals--text">
+                <h4>New Arrivals</h4>
+                <a href="#">Shop more</a>
+            </div>
+        </section>
+
+        <section class="portfolio-container">
+            <div class="portfolio--left">
+                <img src="img/photo-8.webp"
+                    alt="Ceramics photo">
+                <h3>Sheldon Ceramics</h3>
+                <p>From vases to serveware, Shoppe our latest Sheldon Ceramics additions.</p>
+            </div>
+            <div class="portfolio--right">
+                <img src="img/photo-7.webp"
+                    alt="Digital Lookbook photo">
+                <h3>Digital Lookbook</h3>
+                <p>Our Digital Lookbook, Edition Two features our Made by Shoppe pieces mixed with curated and collected accents.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-container">
+            <h4 class="project--heading">As seen in</h4>
+            <div class="projects">
+                <div class="project project--1">
+                    <img src="img/photo-9.webp"
+                        alt="Project 1">
+                    <h3>Client Tupac Meet Biggie To Decorate The</h3>
+                    <a href="#">See the project</a>
+                </div>
+                <div class="project project--2">
+                    <img src="img/photo-10.webp"
+                        alt="Project 2">
+                    <h3>Client West Coast Is The Best Coast</h3>
+                    <a href="#">See the project</a>
+                </div>
+                <div class="project project--3">
+                    <img src="img/photo-11.webp"
+                        alt="Project 3">
+                    <h3>Client What's The Story Spanish Glory</h3>
+                    <a href="#">See the project</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="event-container">
+            <div class="event--left">
+                <img src="img/photo-12.webp"
+                    alt="Event photo">
+                <h3>Events</h3>
+                <p>We love hosting events at our Shoppes! Get ready to mark your calendars for our next event.</p>
+            </div>
+
+            <div class="event--right">
+                <img src="img/photo-13.webp"
+                    alt="Shoppe Shop Photo">
+                <h3>Visit Us</h3>
+                <p>Come visit us at either one of our brick and mortar locations in Los Angeles, California.</p>
+            </div>
+        </section>
+
+        <section class="tothetrade-container">
+            <div class="tothetrade--left">
+                <img src="img/photo-14.webp"
+                    alt="To The Trade Photo">
+            </div>
+            <div class="tothetrade--right">
+                <h3>To The Trade</h3>
+                <p>Being interior designers ourselves we love working with other people in the trade. We offer trade pricing and
+                    other exclusive services to Deisgners, Decorators and Architects.</p>
+                <a href="#">Join now</a>
+            </div>
+        </section>
+
+        <section class="aboutus-container">
+            <div class="aboutus--left">
+                <h3>About Us</h3>
+                <p>A lifelong Californian, interior designer Amber Lewis has always favored bold, colorful styling with a dynamic
+                    mix of both Vintage
+                    and modern. In the summer of 2012, she and her husband, Mike, decided to parlay her natural ability of finding
+                    unique pieces and
+                    textiles into an online Shoppe.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div class="aboutus--right">
+                <img src="img/photo-15.webp"
+                    alt="Room Photo">
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="customer-care">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="">Customer Service</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Gift Registry</a></li>
+                    <li><a href="">Gift Card</a></li>
+                </ul>
+            </div>
+
+            <div class="get-in-touch">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="">Visit Us</a></li>
+                    <li><a href="">Events</a></li>
+                </ul>
+            </div>
+
+            <div class="company">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="">Trade Program</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Amber Interiors</a></li>
+                    <li><a href="">All Sorts Of</a></li>
+                </ul>
+            </div>
+
+            <div class="logo">
+                <img src="img/logo.png"
+                    alt="Logo">
+            </div>
+
+            <div class="social-links">
+                <i class="icofont-instagram"></i>
+                <i class="icofont-facebook"></i>
+                <i class="icofont-pinterest"></i>
+            </div>
+
+            <div class="copyright">
+                <ul>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li>&copy;Shoppe Amber Interiors 2019</li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>
