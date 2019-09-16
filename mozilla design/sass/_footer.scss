@@ -1,0 +1,118 @@
+.main-footer {
+    background-color: #20123a;
+    padding: 3rem;
+    min-height: 28vh;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(min-content, 1fr));
+}
+
+.footer {
+    &--brand {
+        font-weight: bold;
+        color: #fff;
+        text-transform: lowercase;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        margin-bottom: 3rem;
+
+        h1 {
+            font-size: 1.4rem;
+        }
+    }
+
+    &--links {
+        display: flex;
+        grid-column: 1 / 8;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include respond(550px) {
+            flex-direction: column;
+        }
+
+        &__col--1,
+        &__col--2,
+        &__col--3 {
+            list-style: none;
+
+            @include respond(550px) {
+                &:not(:last-child) {
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    &--link {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: #fff;
+            font-weight: bold;
+
+            &:hover,
+            &:active {
+                color: rgba(#fff, .7);
+            }
+        }
+    }
+
+    &--copyright {
+        grid-column: 9 / -1;
+
+        @include respond(1000px) {
+            grid-column: 1 / -1;
+            margin-top: 5rem;
+        }
+
+        &--img {
+            width: 15%;
+        }
+
+        &--links {
+            padding: 1rem 0;
+
+            &__list {
+                list-style: none;
+                display: flex;
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+
+                    &:hover,
+                    &:active {
+                        color: rgba(#fff, .7);
+                    }
+                }
+            }
+        }
+
+        &--text {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 500;
+
+            a {
+                color: #fff;
+            }
+
+            &__2 {
+                display: block;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,216 @@
+.container-cards {
+    display: grid;
+    grid-template-rows: repeat(22, minmax(min-content, 1fr));
+    grid-template-columns: repeat(12, minmax(min-content, 1fr));
+    grid-gap: 2rem;
+    padding: 7rem 3rem 0 3rem;
+    width: 100%;
+    height: 200vh;
+    margin-bottom: 20rem;
+
+    @include respond(1300px) {
+        height: 150vh;
+    }
+
+    @include respond(1000px) {
+        height: 100vh;
+    }
+
+    @include respond(700px) {
+        height: initial;
+        min-height: 100vh;
+        margin-bottom: 10rem;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 85vh);
+        grid-gap: 6rem;
+    }
+
+    @include respond(550px) {
+        grid-template-rows: repeat(4, 50vh);
+    }
+
+    @include respond(450px) {
+        grid-gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    @include respond(350px) {
+        grid-template-rows: repeat(4, 35vh);
+    }
+}
+
+.card {
+
+    &--1,
+    &--2,
+    &--3,
+    &--4 {
+        border-radius: 20px;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &--1 {
+        background: url("../img/card-1.png") center/cover;
+        grid-row: 1 / 11;
+        grid-column: 1 / 7;
+
+        @include respond(700px) {
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+        }
+
+        &:hover {
+            .content {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--2 {
+        background: url("../img/card-2.png") center/cover;
+        grid-row: 3 / 13;
+        grid-column: 7 / -1;
+
+        @include respond(700px) {
+            grid-row: 2 / 3;
+            grid-column: 1 / -1;
+        }
+
+        &:hover {
+            .content {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--3 {
+        background: url("../img/card-3.png") center/cover;
+        grid-row: 11 / -3;
+        grid-column: 1 / 7;
+
+        @include respond(700px) {
+            grid-row: 3 / 4;
+            grid-column: 1 / -1;
+        }
+    }
+
+    &--4 {
+        background: url("../img/card-4.png") center/cover;
+        grid-row: 13 / -1;
+        grid-column: 7 / -1;
+
+        @include respond(700px) {
+            grid-row: 4 / 5;
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+.content {
+    margin-top: 30rem;
+    padding: 0 4rem;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+
+    &--panel {
+        &--list {
+            list-style: none;
+        }
+
+        &--item {
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 4.8rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include respond(1400px) {
+        margin-top: 22rem;
+    }
+
+    @include respond(1200px) {
+        margin-top: 17rem;
+    }
+
+    @include respond(1000px) {
+        display: none;
+    }
+}
+
+.title {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    width: 90%;
+
+    h3 {
+        font-size: 4.8rem;
+        color: #fff;
+        display: inline-block;
+        max-width: 100%;
+
+        @include respond(1200px) {
+            max-width: 60%;
+        }
+    }
+}
+
+.card--3 {
+    .title {
+        h3 {
+            color: #000;
+        }
+    }
+}
+
+.logo-mozilla {
+    width: 50%;
+    height: 50%;
+}
+
+.logo-firefox {
+    width: 70%;
+    height: 70%;
+}
+
+.msg {
+    position: absolute;
+    bottom: 5%;
+    padding: 0 4rem;
+    font-size: 3.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.underline {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+        visibility: hidden;
+        transition: width 0.5s cubic-bezier(0.07, 0.95, 0, 1);
+    }
+
+    &:hover::after {
+        visibility: visible;
+        width: 100%;
+    }
+}
+
+.fill {
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}

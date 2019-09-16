@@ -1,0 +1,146 @@
+.main-header {
+    width: 100%;
+    height: 7.1rem;
+    padding: 0 3rem;
+    background-color: rgba(#fff, .7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.brand {
+    h1 {
+        a {
+            text-decoration: none;
+            color: #000;
+            text-transform: lowercase;
+            font-size: 2rem;
+        }
+    }
+}
+
+.nav {
+    width: 50%;
+
+    &--list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &--item {
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-size: 2rem;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+
+            &:hover,
+            &:active {
+                border-bottom: 2px solid #000;
+            }
+        }
+    }
+
+    @include respond(1000px) {
+        @include hide;
+    }
+}
+
+.links {
+    text-decoration: none;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+
+    @include respond(1000px) {
+        @include hide;
+    }
+}
+
+.mobile-nav-trigger {
+    font-size: 2rem;
+    max-width: 80%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    display: none;
+    
+    i {
+        cursor: pointer;
+    }
+
+    .icofont-navigation-menu {
+        display: block;
+        width: initial;
+    }
+
+    .icofont-close {
+        font-size: 2.5rem;
+        display: none;
+        width: 0;
+        color: #fff;
+    }
+
+    @include respond(1000px) {
+        display: flex;
+    }
+}
+
+.mobile-nav {
+    width: 100%;
+    height: calc(100vh - 7rem);
+    margin-top: 7rem;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: none;
+
+    &--list {
+        list-style: none;
+        margin-left: 3rem;
+    }
+
+    &--item {
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 3.2rem;
+            font-weight: bold;
+        }
+
+        .icofont-caret-down {
+            color: #fff;
+            font-size: 3.2rem;
+            display: inline-block;
+            margin-left: 1rem;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+.panel {
+    padding: 2rem 0;
+    height: 0;
+    @include hide;
+
+    &--counter {
+        color: rgba(#fff, .4);
+    }
+}
