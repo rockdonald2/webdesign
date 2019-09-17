@@ -1,0 +1,347 @@
+/* variables */
+/* mixins */
+/* normalize */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  transition: all .3s ease-in-out;
+  scroll-behavior: smooth; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Helvetica Neue', 'Zilla Slab', serif;
+  background-color: #fff; }
+
+/* utility */
+.underline {
+  position: relative; }
+  .underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: #fff;
+    visibility: hidden;
+    transition: width 0.7s ease-in-out; }
+  .underline:hover::after {
+    visibility: visible;
+    width: 100%; }
+
+.fixed-nav {
+  position: fixed; }
+
+.main-header {
+  width: 100%;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5; }
+  @media only screen and (max-width: 960px) {
+    .main-header {
+      padding: 0; } }
+
+.fixed-nav {
+  background-color: #fff; }
+
+.fixed-nav .list .item a {
+  color: #000; }
+
+.fixed-nav .path {
+  fill: #000; }
+
+.fixed-nav .mobile-nav--open {
+  color: #000; }
+
+.navbar {
+  height: 7.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+  .navbar--left {
+    width: 33.33333%;
+    padding: 0 2rem; }
+  .navbar--brand {
+    width: 33.33333%;
+    padding: 0 2rem;
+    text-align: center; }
+    .navbar--brand svg {
+      width: 16rem;
+      height: 2.5rem; }
+  .navbar--right {
+    width: 33.33333%;
+    padding: 0 2rem; }
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none; }
+  .list .item:not(:last-child) {
+    margin-right: 4rem; }
+  .list .item a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 500;
+    font-size: 1.2rem; }
+
+@media only screen and (max-width: 960px) {
+  #left-list {
+    justify-content: flex-start; }
+  #right-list {
+    justify-content: flex-end; } }
+
+@media only screen and (max-width: 720px) {
+  #left-list,
+  #right-list {
+    display: none; } }
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  opacity: 0;
+  padding: 2rem;
+  transition: opacity .5s ease-in-out;
+  visibility: hidden; }
+  .mobile-nav--open, .mobile-nav--close {
+    display: none;
+    font-size: 2.4rem;
+    cursor: pointer; }
+  .mobile-nav--open {
+    color: #fff; }
+    @media only screen and (max-width: 720px) {
+      .mobile-nav--open {
+        display: block; } }
+  .mobile-nav--close {
+    color: #000;
+    position: absolute;
+    top: 2.5rem; }
+  .mobile-nav--header {
+    margin-top: 1rem; }
+  .mobile-nav--brand {
+    text-align: center; }
+    .mobile-nav--brand svg {
+      width: 8rem;
+      height: 1.3rem; }
+  .mobile-nav--items {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .mobile-nav--list {
+    list-style: none; }
+  .mobile-nav--item {
+    text-align: center; }
+    .mobile-nav--item:not(:last-child) {
+      margin-bottom: 1rem; }
+    .mobile-nav--item a {
+      text-decoration: none;
+      color: #000;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      font-weight: 500; }
+      .mobile-nav--item a.underline::after {
+        background: #000; }
+  .mobile-nav--banner__items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .mobile-nav--banner__item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 300; }
+    .mobile-nav--banner__item a.underline::after {
+      background: #000; }
+
+.container-home {
+  width: 100%;
+  height: 100vh;
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_OCB_01a.jpg) center/cover; }
+  @media only screen and (max-width: 720px) {
+    .container-home {
+      display: none; } }
+
+.container-projects {
+  width: 100%;
+  min-height: 300vh;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  padding: 1rem;
+  padding-bottom: 0; }
+  @media only screen and (max-width: 1300px) {
+    .container-projects {
+      min-height: 200vh; } }
+  @media only screen and (max-width: 980px) {
+    .container-projects {
+      padding: 0; } }
+  @media only screen and (max-width: 720px) {
+    .container-projects {
+      grid-template-columns: 1fr; } }
+
+.project {
+  flex-basis: 50%;
+  min-height: 28vh;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden; }
+  @media only screen and (max-width: 980px) {
+    .project {
+      margin: 0; } }
+  .project--content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden; }
+    .project--content:hover > .backdrop {
+      opacity: 1; }
+    .project--content:hover > .project--heading {
+      opacity: 1; }
+    .project--content:hover > .project--type {
+      opacity: 1; }
+    @media only screen and (max-width: 720px) {
+      .project--content {
+        height: 50vh; } }
+    @media only screen and (max-width: 720px) {
+      .project--content:hover > .backdrop {
+        opacity: 0; }
+      .project--content:hover > .project--heading {
+        opacity: 0; }
+      .project--content:hover > .project--type {
+        opacity: 0; } }
+  .project--heading, .project--type {
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: all .3s ease-in-out; }
+  .project--heading {
+    font-size: 2.6rem;
+    font-weight: 500; }
+  .project--type {
+    font-size: 1.4rem;
+    font-weight: 400; }
+
+.img-1 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_Disrepute_13-1800x1013.jpeg) center/cover; }
+
+.img-2 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_SavageGarden_01a-1800x1013.jpg) center/cover; }
+
+.img-3 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_DM_12a_Birmingham-1800x1013.jpg) center/cover; }
+
+.img-4 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_Dorchester04-1800x1013.jpg) center/cover; }
+
+.img-5 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_WarringtonHotel_05-1800x1013.jpg) center/cover; }
+
+.img-6 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_OCB_01a-1800x1013.jpg) center/cover; }
+
+.img-7 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_Kupp_07_Oxforda-1800x1013.jpg) center/cover; }
+
+.img-8 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_Babel_06a-1800x1013.jpg) center/cover; }
+
+.img-9 {
+  background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_Halo_01a-1800x1013.jpg) center/cover; }
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out; }
+
+.main-footer {
+  width: 100%;
+  height: 7.5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .main-footer .underline::after {
+    background: #000; }
+
+.footer--list {
+  width: 50%; }
+  .footer--list__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none; }
+    @media only screen and (max-width: 980px) {
+      .footer--list__items {
+        justify-content: flex-start; } }
+  .footer--list__item:not(:last-child) {
+    margin-right: 4rem; }
+  .footer--list__item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500; }
+
+.footer--copyright {
+  width: 50%;
+  text-align: center; }
+  @media only screen and (max-width: 980px) {
+    .footer--copyright {
+      text-align: right; } }
+  .footer--copyright a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500; }
+
+@media only screen and (max-width: 720px) {
+  .footer--list, .footer--copyright {
+    display: none; } }
+
+.footer--mobile {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between; }
+  .footer--mobile a {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    color: #000;
+    text-decoration: none; }
+  @media only screen and (max-width: 720px) {
+    .footer--mobile {
+      display: flex; } }

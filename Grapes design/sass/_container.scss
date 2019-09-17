@@ -1,0 +1,156 @@
+.container-home {
+	width: 100%;
+	height: 100vh;
+	background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_OCB_01a.jpg) center/cover;
+
+	@include respond(720px) {
+		display: none;
+	}
+}
+
+.container-projects {
+	width: 100%;
+	min-height: 300vh;
+	background-color: #fff;
+
+	display: grid;
+	grid-template-columns: repeat(2, minmax(min-content, 1fr));
+
+	padding: 1rem;
+	padding-bottom: 0;
+
+	@include respond(1300px) {
+		min-height: 200vh;
+	}
+
+	@include respond(980px) {
+		padding: 0;
+	}
+
+	@include respond(720px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.project {
+	flex-basis: 50%;
+	min-height: 28vh;
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+
+	@include respond(980px) {
+		margin: 0;
+	}
+
+	&--content {
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		overflow: hidden;
+
+		&:hover > .backdrop {
+			opacity: 1;
+		}
+
+		&:hover > .project--heading {
+			opacity: 1;
+		}
+
+		&:hover > .project--type {
+			opacity: 1;
+		}
+
+		@include respond(720px) {
+			height: 50vh;
+		}
+
+		@include respond(720px) {
+			&:hover > .backdrop {
+				opacity: 0;
+			}
+
+			&:hover > .project--heading {
+				opacity: 0;
+			}
+
+			&:hover > .project--type {
+				opacity: 0;
+			}
+		}
+	}
+
+	&--heading,
+	&--type {
+		color: $color-white;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 2;
+		opacity: 0;
+		transition: all .3s ease-in-out;
+	}
+
+	&--heading {
+		font-size: 2.6rem;
+		font-weight: 500;
+	}
+
+	&--type {
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+}
+
+.img {
+	&-1 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_Disrepute_13-1800x1013.jpeg) center/cover;
+	}
+
+	&-2 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_SavageGarden_01a-1800x1013.jpg) center/cover;
+	}
+
+	&-3 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_DM_12a_Birmingham-1800x1013.jpg) center/cover;
+	}
+
+	&-4 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_Dorchester04-1800x1013.jpg) center/cover;
+	}
+
+	&-5 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_WarringtonHotel_05-1800x1013.jpg) center/cover;
+	}
+
+	&-6 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2019/02/Grapes_OCB_01a-1800x1013.jpg) center/cover;
+	}
+
+	&-7 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_Kupp_07_Oxforda-1800x1013.jpg) center/cover;
+	}
+
+	&-8 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_Babel_06a-1800x1013.jpg) center/cover;
+	}
+
+	&-9 {
+		background: url(https://www.grapesdesign.com/wp-content/uploads/2018/12/Grapes_Halo_01a-1800x1013.jpg) center/cover;
+	}
+}
+
+.backdrop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color-black, .6);
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+}
