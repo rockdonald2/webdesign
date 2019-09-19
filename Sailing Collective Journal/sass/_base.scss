@@ -1,0 +1,127 @@
+/* Variables */
+$color-light: #fff;
+$color-dark: #000;
+$color-primary: #00abc7;
+
+$font-primary: 'Titillum', sans-serif;
+$font-secondary: 'Zilla Slab', serif;
+$font-tertiary: 'Nanum Myeongjo', serif;
+
+/* Mixins */
+@mixin respond($bp) {
+    @media only screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+/* Normalize */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    transition: all .3s ease-in-out;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%; // 10px
+    box-sizing: border-box;
+
+    @include respond(700px) {
+        font-size: 56.25%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    position: relative;
+}
+
+/* Utility */
+.category {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid $color-primary;
+    display: inline-block;
+    letter-spacing: .2rem;
+    margin-bottom: 1rem;
+}
+
+.heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .2rem;
+    color: rgba($color-dark, .7);
+    font-family: $font-tertiary;
+}
+
+.author {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-style: italic;
+    color: rgba($color-dark, .3);
+    font-family: $font-secondary;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-light, .35);
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.left-margin {
+    width: 5rem;
+    height: 100%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.section-tag {
+    position: relative;
+    left: 3rem;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    letter-spacing: .2rem;
+    width: 10rem;
+}
+
+.btn--cta {
+    font-weight: 300;
+    font-family: $font-secondary;
+    font-size: 1.4rem;
+    padding: 2rem 4rem;
+    border: 1px solid $color-dark;
+    color: $color-dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    max-width: 20rem;
+    margin: 0 auto;
+    display: block;
+
+    &:hover {
+        border-color: $color-primary;
+        color: $color-primary;
+    }
+}

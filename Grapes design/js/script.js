@@ -1,3 +1,20 @@
+function debounce(func, wait = 10, immediate = true) {
+	var timeout;
+	return function () {
+		var context = this,
+			args = arguments;
+		var later = function () {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+}
+
+
 const mobileNavOpen = document.querySelector('.mobile-nav--open');
 const mobileNavClose = document.querySelector('.mobile-nav--close');
 const mobileNav = document.querySelector('.mobile-nav');
@@ -26,26 +43,22 @@ mobileNavClose.addEventListener('click', hideMobileNav);
 const header = document.querySelector('.main-header');
 const hero = document.querySelector('.container-home')
 
-// Initial state
 var scrollPos = 0;
-// adding scroll event
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', debounce(function () {
 
-  // detects new state and compares it with the new one
-  	if ((document.body.getBoundingClientRect()).top > scrollPos) {
+	if ((document.body.getBoundingClientRect()).top > scrollPos) {
 		// UP
-	  	header.style.transform = "translateY(0)";
+		header.style.transform = "translateY(0)";
 
 		if (Math.abs(scrollPos) > hero.offsetHeight) {
 			header.classList.add('fixed-nav');
 		} else {
 			header.classList.remove('fixed-nav');
 		}
-  	}
-	else {
+	} else {
 		// DOWN
 		header.style.transform = `translateY(-${header.offsetHeight}px)`;
 	}
 	// saves the new position for iteration.
 	scrollPos = (document.body.getBoundingClientRect()).top;
-});
+}));
