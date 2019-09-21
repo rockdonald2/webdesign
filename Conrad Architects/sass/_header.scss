@@ -1,0 +1,172 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 0 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    @include respond(1250px) {
+        padding: 5rem 1rem 0 1rem;
+    }
+
+
+    &--brand {
+        text-align: center;
+        width: 98%;
+        margin-left: 6.5rem;
+        transition: all .25s ease-in;
+
+        img {
+            width: 15%;
+
+            @include respond(1250px) {
+                width: 25%;
+            }
+
+            @include respond(950px) {
+                width: 35%;
+            }
+
+            @include respond(700px) {
+                display: none;
+            }
+        }
+
+
+    }
+
+    &--trigger {
+        font-size: 3rem;
+        color: rgba($color-text, .5);
+        width: 2%;
+        margin-right: 5rem;
+        transition: all .2s ease;
+
+        &:hover {
+            color: $color-text;
+        }
+    }
+}
+
+.menu {
+    position: absolute;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 8rem 2rem;
+    top: 0;
+    transform: translateY(-20rem);
+    transition: all .4s ease-in-out;
+
+    @include respond(1250px) {
+        padding: 5rem 1rem 5rem 1rem;
+    }
+
+    @include respond(1000px) {
+        height: 100vh;
+        transform: translateY(0);
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        opacity: 0;
+        z-index: -1;
+        display: none;
+    }
+
+    &--brand {
+        display: none;
+
+        @include respond(1000px) {
+            display: block;
+            margin-left: 5rem;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    &--list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        width: 98%;
+        margin-left: 5rem;
+
+        @include respond(1000px) {
+            flex-direction: column;
+            width: auto;
+            margin-top: -10rem;
+        }
+    }
+
+    &--item {
+        &:not(:last-child) {
+            margin-right: 4rem;
+
+            @include respond(1000px) {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+
+        a {
+            color: rgba($color-text, .5);
+            text-decoration: none;
+            font-size: 2rem;
+            transition: all .2s ease;
+
+            &:hover {
+                color: $color-text;
+            }
+
+            @include respond(1000px) {
+                font-size: 2.5rem;
+            }
+        }
+
+        @include respond(1000px) {
+            width: 100%;
+        }
+    }
+
+    &--trigger {
+        font-size: 3rem;
+        color: rgba($color-text, .5);
+        width: 2%;
+        margin-right: 5rem;
+        transition: all .2s ease;
+
+        &:hover {
+            color: $color-text;
+        }
+
+        @include respond(1000px) {
+            position: absolute;
+            top: 5%;
+            right: 1.5%;
+        }
+    }
+
+    &--footer {
+        display: none;
+
+        @include respond(1000px) {
+            display: block;
+            margin-left: 5rem;
+            color: $color-text;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.hideBrand {
+    /* transform: translateY(-15rem) !important; */
+    opacity: 0;
+}

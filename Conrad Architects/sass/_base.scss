@@ -1,0 +1,42 @@
+/* variables */
+$color-primary: rgb(228, 231, 235);
+$color-text: rgb(89, 88, 80);
+
+/* mixins */
+@mixin respond($bp) {
+    @media only screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+
+/* normalize */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include respond(1000px) {
+        font-size: 56.25%;
+    }
+
+    @include respond(800px) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    width: 100%;
+    min-height: 200vh;
+    background-color: $color-primary;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "conrad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "browser-sync start --directory --server --files \"*.css, *.html, *.js\" --https",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.5 <2.23.2",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
