@@ -1,0 +1,121 @@
+.wrapper {
+    background-color: transparent;
+    padding-left: 20vw;
+    padding-right: 20%;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(5rem, 1fr));
+    grid-template-rows: 100vh 100vh 1fr;
+    overflow: hidden;
+}
+
+.lead {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: .15rem;
+    line-height: 1.4;
+    opacity: 1;
+
+    @include respond(1000px) {
+        font-size: 3.2rem;
+    }
+    
+    span {
+        opacity: 0;
+
+        &:nth-of-type(5n+1) {
+            animation: appear .75s .75s ease-in forwards;
+        }
+        &:nth-of-type(5n+2) {
+            animation: appear .75s .85s ease-in forwards;
+        }
+        &:nth-of-type(5n+3) {
+            animation: appear .75s .95s ease-in forwards;
+        }
+        &:nth-of-type(5n+4) {
+            animation: appear .75s 1.05s ease-in forwards;
+        }
+        &:nth-of-type(5n+5) {
+            animation: appear .75s 1.15s ease-in forwards;
+        }
+    }
+}
+
+.welcome {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    align-self: center;
+}
+
+.services {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-template-rows: 10% 90%;
+    animation: appear .35s .5s ease-in-out forwards;
+    opacity: 0;
+    transition: all .15s;
+
+    @include respond(1000px) {
+        margin-bottom: 50%;
+    }
+
+    .subheading {
+        grid-column: 1 / -1;
+    }
+
+    .heading {
+        margin-bottom: 4rem;
+    }
+
+    .text {
+        max-width: 85%;
+        margin-bottom: 4rem;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.projects {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+
+    .subheading {
+        margin-bottom: 10%;
+    }
+
+    .heading {
+        margin-bottom: 50%;
+        font-size: 3.2rem;
+        font-weight: 400;
+    }
+}
+
+.project {
+
+}
+
+.slide-in-images {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    background-color: $color-black;
+    z-index: 1;
+}
+
+.image {
+
+    img {
+        width: 70rem;
+        height: 70rem;
+    }
+}

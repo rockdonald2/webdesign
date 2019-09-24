@@ -1,0 +1,175 @@
+.sidebar {
+    background-color: transparent;
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem 0;
+    z-index: 50;
+    transition: all .15s;
+    animation: appear .35s .5s ease-in-out forwards;
+    opacity: 0;
+
+    @include respond(1000px) {
+        display: block;
+        padding: 5rem;
+    }
+
+    @include respond(780px) {
+        padding: 3.5rem;
+    }
+    
+
+    &--brand {
+        svg {
+            path {
+                fill: $color-white;
+            }
+
+            @include respond(1000px) {
+                width: 3rem;
+                height: 4rem;
+            }
+
+            @include respond(780px) {
+                width: 5rem;
+                height: 6rem;
+            }
+        }
+
+        position: relative;
+        z-index: 50;
+    }
+
+    &--list {
+        list-style: none;
+        transition: all .35s;
+        position: relative;
+        z-index: 50;
+
+        @include respond(1000px) {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            bottom: 10vh;
+            left: 50vw;
+            text-align: center;
+            transform: translateX(-50%);
+        }
+    }
+
+    &--item {
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+
+        position: relative;
+
+        &__1,
+        &__2,
+        &__3,
+        &__4 {
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: .25rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: rgba($color-white, .6);
+            transition: all .35s;
+            position: relative;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+
+        &__1,
+        &__2,
+        &__3,
+        &__4 {
+            @include respond(1000px) {
+                opacity: 0;
+            }
+        }
+
+        @include respond(1000px) {
+            &__1 {
+                top: 25px;
+            }
+    
+            &__2 {
+                top: 30px;
+            }
+    
+            &__3 {
+                top: 35px;
+            }
+    
+            &__4 {
+                top: 40px;
+            }
+        }
+    }
+
+    &--open {
+        display: none;
+
+        @include respond(1000px) {
+            display: block;
+            position: fixed;
+            bottom: 5vh;
+            left: 50vw;
+            font-size: 1.2rem;
+            letter-spacing: .25rem;
+            font-weight: 500;
+            color: rgba($color-white, .6);
+            cursor: pointer;
+            transition: color .35s;
+            z-index: 50;
+            transform: translateX(-50%);
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+
+    &--close {
+        display: none;
+
+        @include respond(1000px) {
+            position: fixed;
+            bottom: 5vh;
+            left: 50vw;
+            font-size: 1.2rem;
+            letter-spacing: .25rem;
+            font-weight: 500;
+            color: rgba($color-white, .6);
+            cursor: pointer;
+            transition: color .35s;
+            z-index: 50;
+            transform: translateX(-50%);
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+
+    &--backdrop {
+        width: 100%;
+        height: 100vh;
+        background-color: $color-black;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        transform: translateX(100%);
+        transition: all .25s ease-in;
+        z-index: 1;
+    }
+}

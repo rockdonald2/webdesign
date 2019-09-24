@@ -1,0 +1,64 @@
+.footer {
+    width: 100%;
+    height: 50vh;
+    padding-left: 20vw;
+    padding-right: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &--wrapper {
+        height: 25%;
+        width: 50%;
+        text-align: right;
+        padding-right: 5rem;
+    }
+
+    &--copyright {
+        font-size: 1.4rem;
+        margin-bottom: 10%;
+    }
+
+    &--text {
+        font-size: 1.2rem;
+        color: rgba($color-white, .6);
+        display: block;
+        max-width: 80%;
+        margin-left: auto;
+    }
+
+    .indent {
+        padding-right: 10rem;
+    }
+
+    @include respond(1000px) {
+        justify-content: center;
+        align-items: center;
+
+        .indent {
+            padding: 0;
+            display: block;
+        }
+
+        &--wrapper {
+            text-align: center;
+            padding-right: 0;
+        }
+
+        &--text {
+            display: inline;
+        }
+    }
+
+    @include respond(780px) {
+        .indent {
+            display: inline;
+        }
+
+        &--wrapper {
+            width: 100%;
+            text-align: left;
+            padding-right: 2.5rem;
+        }
+    }
+}
