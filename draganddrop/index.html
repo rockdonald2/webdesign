@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            display: inline-flex;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .picture {
+            padding: 16rem;
+            min-width: 100vw;
+        }
+
+        .picture--1 {
+            background: url("img/picture-1.jpg") center/cover;
+        }
+
+        .picture--2 {
+            background: url("img/picture-2.jpg") center/cover;
+        }
+
+        .picture--3 {
+            background: url("img/picture-3.jpg") center/cover;
+        }
+
+        .picture--4 {
+            background: url("img/picture-4.jpg") center/cover;
+        }
+
+        .picture--heading {
+            font-size: 3.2rem;
+            color: lightslategray;
+            font-style: italic;
+        }
+
+        .picture--lead {
+            font-size: 1.8rem;
+            color: black;
+            max-width: 100rem;
+        }
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+            content="ie=edge">
+        <title>Drag and Drop</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="picture picture--1">
+                <h2 class="picture--heading">
+                    Lorem ipsum...
+                </h2>
+                <p class="picture--lead">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis officia tempore, harum quam ea corporis
+                    fugit dolor, nulla rem doloremque, libero sint voluptates debitis ratione possimus. Cum eveniet officia
+                    consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur eligendi, beatae doloribus
+                    sapiente reprehenderit veritatis delectus? Et praesentium dolorem nobis labore voluptatum, neque quam, cum,
+                    esse at rerum quasi? Fugiat?
+                </p>
+            </div>
+            <div class="picture picture--2">
+                <h2 class="picture--heading">
+                    Lorem ipsum...
+                </h2>
+                <p class="picture--lead">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis officia tempore, harum quam ea corporis
+                    fugit dolor, nulla rem doloremque, libero sint voluptates debitis ratione possimus. Cum eveniet officia
+                    consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur eligendi, beatae doloribus
+                    sapiente reprehenderit veritatis delectus? Et praesentium dolorem nobis labore voluptatum, neque quam, cum,
+                    esse at rerum quasi? Fugiat?
+                </p>
+            </div>
+            <div class="picture picture--3">
+                <h2 class="picture--heading">
+                    Lorem ipsum...
+                </h2>
+                <p class="picture--lead">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis officia tempore, harum quam ea corporis
+                    fugit dolor, nulla rem doloremque, libero sint voluptates debitis ratione possimus. Cum eveniet officia
+                    consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur eligendi, beatae doloribus
+                    sapiente reprehenderit veritatis delectus? Et praesentium dolorem nobis labore voluptatum, neque quam, cum,
+                    esse at rerum quasi? Fugiat?
+                </p>
+            </div>
+            <div class="picture picture--4">
+                <h2 class="picture--heading">
+                    Lorem ipsum...
+                </h2>
+                <p class="picture--lead">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis officia tempore, harum quam ea corporis
+                    fugit dolor, nulla rem doloremque, libero sint voluptates debitis ratione possimus. Cum eveniet officia
+                    consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur eligendi, beatae doloribus
+                    sapiente reprehenderit veritatis delectus? Et praesentium dolorem nobis labore voluptatum, neque quam, cum,
+                    esse at rerum quasi? Fugiat?
+                </p>
+            </div>
+        </div>
+
+        <script>
+            const slider = document.querySelector('.wrapper');
+            const slides = document.querySelectorAll('.picture');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                scrollLeft = slider.scrollLeft;
+                e.preventDefault();
+
+                const x = e.pageX - slider.offsetLeft;
+                const walk = slides[0].offsetWidth;
+                if (slider.scrollLeft == (3 * walk)) {
+                    slider.scrollLeft = 0;
+                } else {
+                    slider.scrollLeft = scrollLeft + walk;
+                }
+            });
+
+            slider.addEventListener('mouseenter', (e) => {
+                isDown = false;
+            });
+
+            slider.addEventListener('mouseleave', (e) => {
+                isDown = false;
+            });
+        </script>
+    </body>
+
+</html>

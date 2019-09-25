@@ -9,3 +9,16 @@ function handleMenu(e) {
 }
 
 trigger.addEventListener('click', handleMenu);
+
+const modules = document.querySelectorAll('.module');
+
+function appear(e) {
+    modules.forEach((module) => {
+        if (window.scrollY + 200 >= module.offsetTop) {
+            module.classList.add('appear');
+        }
+    })
+}
+
+window.addEventListener('scroll', appear);
+

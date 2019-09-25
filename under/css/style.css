@@ -12,7 +12,7 @@
 }
 
 *::selection {
-  background-color:rgba(160, 174, 192, .5);
+  background-color: rgba(160, 174, 192, .5);
 }
 
 html {
@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  font-family: 'Crimson Text', serif;
   background-color: #D1CFCD;
 }
 
@@ -34,6 +35,20 @@ body {
   width: 100%;
   min-height: 100vh;
   background: url("../img/IK_Snohetta-Under_0915-crop.jpg") center/cover;
+  opacity: 0;
+  animation: appear .5s ease-in-out forwards;
+}
+
+.intro-main--lead {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp .5s .5s ease-in-out forwards;
+}
+
+.intro-main .intro-main--btn {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp .5s 1s ease-in-out forwards;
 }
 
 .intro-main--btn:hover .intro-main--arrow {
@@ -42,6 +57,9 @@ body {
 
 .navbar {
   z-index: 50;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDown .5s .5s ease-in-out forwards;
 }
 
 .menu-trigger {
@@ -104,45 +122,72 @@ body {
   transform: translateY(-5px) scale(1.05);
 }
 
+.module {
+  transition: all .5s ease-in-out;
+}
+
 /*  SECTIONS  */
 .section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+  clear: both;
+  padding: 0px;
+  margin: 0px;
 }
 
 /*  COLUMN SETUP  */
 .col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.2%;
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.2%;
 }
-.col:first-child { margin-left: 0; }
+
+.col:first-child {
+  margin-left: 0;
+}
 
 /*  GROUPING  */
 .group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 */
+}
 
 /*  GRID OF TWO  */
 .span_2_of_2 {
-	width: 100%;
+  width: 100%;
 }
+
 .span_1_of_2 {
-	width: 49.4%;
+  width: 49.4%;
+}
+
+.module {
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 /*  GO FULL WIDTH AT LESS THAN 1000 PIXELS */
 
 @media only screen and (max-width: 1024px) {
-	.col { 
-		margin: 1% 0 1% 0%;
-	}
+  .col {
+    margin: 1% 0 1% 0%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-	.span_2_of_2, .span_1_of_2 { width: 100%; }
+
+  .span_2_of_2,
+  .span_1_of_2 {
+    width: 100%;
+  }
 }
 
 img {
@@ -153,4 +198,43 @@ img {
   img {
     width: 90%;
   }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
 }
