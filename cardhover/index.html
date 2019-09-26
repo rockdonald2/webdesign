@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            background: #0f2027;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: #0f2027;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            max-width: 40rem;
+            height: 50rem;
+            background-color:rgba(255, 255, 255, .2);
+            padding: 1.6rem;
+            border-radius: 6px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        .card--header {
+            font-size: 3.2rem;
+            height: 20%;
+            text-align: center;
+        }
+
+        .card--lead {
+            font-size: 1.4rem;
+            height: 80%;
+        }
+
+        .shadow-longer {
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09),
+                0 4px 2px rgba(0, 0, 0, 0.09),
+                0 8px 4px rgba(0, 0, 0, 0.09),
+                0 16px 8px rgba(0, 0, 0, 0.09),
+                0 32px 16px rgba(0, 0, 0, 0.09);
+        }
+
+        .highlight {
+            transition: all .2s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color:#ecf0f1;
+            border-radius: 6px;
+            display: block;
+        }
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+            content="ie=edge">
+        <title>Card Follow Along Hover Effect</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="card card--1 shadow-longer">
+                <h2 class="card--header">Lorem ipsum...</h2>
+                <p class="card--lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam officia mollitia, totam
+                    pariatur voluptates dolorem, dolores expedita qui dolor inventore harum! Dolore cum corrupti minima tempore
+                    esse in sequi?</p>
+            </div>
+            <div class="card card--2 shadow-longer">
+                <h2 class="card--header">Lorem ipsum...</h2>
+                <p class="card--lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatibus fugit illo
+                    tenetur sint odit cumque, quam provident distinctio labore nesciunt repellat, quos modi aperiam debitis facere
+                    nemo vel voluptatem?</p>
+            </div>
+            <div class="card card--3 shadow-longer">
+                <h2 class="card--header">Lorem ipsum...</h2>
+                <p class="card--lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nulla quod, minima
+                    adipisci pariatur distinctio a explicabo nostrum veniam mollitia, praesentium repudiandae fugiat unde! Enim
+                    non corporis praesentium obcaecati iusto.</p>
+            </div>
+        </div>
+
+        <script>
+            const triggers = document.querySelectorAll('.card');
+            const highlight = document.createElement('span');
+            highlight.classList.add('highlight');
+            highlight.classList.add('shadow-longer');
+            document.body.appendChild(highlight);
+            console.log(triggers);
+
+            function highlightCard(e) {
+                const linkCoords = this.getBoundingClientRect();
+                console.log(linkCoords);
+
+                const coords = {
+                    width: linkCoords.width,
+                    height: linkCoords.height,
+                    x: linkCoords.x + window.scrollX,
+                    y: linkCoords.y + window.scrollY
+                }
+
+                highlight.style.width = `${coords.width}px`;
+                highlight.style.height = `${coords.height}px`;
+                highlight.style.transform = `translate(${coords.x}px, ${coords.y}px)`;
+            }
+
+            triggers.forEach(trigger => trigger.addEventListener('mouseenter', highlightCard));
+            triggers.forEach(trigger => trigger.addEventListener('mouseleave', (e) => {
+                highlight.style.width = `${0}px`;
+                highlight.style.height = `${0}px`;
+                highlight.style.transform = `translate(${0}px, ${0}px)`;
+            }));
+        </script>
+    </body>
+
+</html>

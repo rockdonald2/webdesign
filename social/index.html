@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        #particles-js canvas {
+            width: 100%;
+            min-height: 100vh !important;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social {
+            width: 196px;
+            height: 196px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social:not(:last-child) {
+            margin-right: 100px;
+        }
+
+        svg {
+            width: 64px !important;
+            height: 64px !important;
+        }
+
+        path {
+            fill: #353b48;
+        }
+
+        .highlight {
+            transition: all .2s;
+            position: absolute;
+            z-index: -1;
+            width: 0;
+            height: 0;
+            top: 0;
+            left: 0;
+            background-color: #dcdde167;
+            border-radius: 6px;
+            display: block;
+            opacity: 0;
+        }
+
+        .shadow-longer {
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09),
+                0 4px 2px rgba(0, 0, 0, 0.09),
+                0 8px 4px rgba(0, 0, 0, 0.09),
+                0 16px 8px rgba(0, 0, 0, 0.09),
+                0 32px 16px rgba(0, 0, 0, 0.09);
+        }
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+            content="ie=edge">
+        <title>social</title>
+    </head>
+
+    <body>
+        <div id="particles-js"></div>
+        <div class="wrapper">
+            <div class="social">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32">
+                    <path fill="#fff"
+                        d="M15.996 15.457l16.004-7.539v-3.918h-32v3.906zM16.004 19.879l-16.004-7.559v15.68h32v-15.656z"></path>
+                </svg>
+            </div>
+            <div class="social">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32">
+                    <path fill="#fff"
+                        d="M32 7.075c-1.175.525-2.444.875-3.77 1.03 1.357-.812 2.395-2.1 2.888-3.63-1.27.75-2.675 1.3-4.17 1.594C25.75 4.793 24.044 4 22.156 4c-3.625 0-6.563 2.938-6.563 6.563 0 .512.056 1.012.17 1.494C10.304 11.782 5.466 9.17 2.23 5.195c-.563.97-.887 2.1-.887 3.3 0 2.275 1.156 4.287 2.92 5.463-1.076-.03-2.088-.33-2.976-.82v.082c0 3.18 2.263 5.838 5.27 6.437-.55.15-1.132.23-1.732.23-.425 0-.83-.043-1.237-.118.838 2.605 3.263 4.505 6.13 4.562-2.25 1.762-5.074 2.813-8.155 2.813-.53 0-1.05-.03-1.57-.094C2.908 28.92 6.357 30 10.064 30c12.075 0 18.68-10.005 18.68-18.68 0-.287-.005-.57-.018-.85 1.28-.92 2.394-2.075 3.275-3.394z">
+                    </path>
+                </svg>
+            </div>
+            <div class="social">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32">
+                    <path fill="#fff"
+                        d="M16 .395c-8.836 0-16 7.163-16 16 0 7.07 4.585 13.067 10.942 15.182.8.148 1.094-.347 1.094-.77 0-.38-.015-1.642-.022-2.98-4.452.97-5.39-1.887-5.39-1.887-.73-1.85-1.777-2.34-1.777-2.34-1.452-.994.11-.974.11-.974 1.606.113 2.452 1.65 2.452 1.65 1.426 2.445 3.742 1.738 4.655 1.33.143-1.035.558-1.74 1.016-2.14-3.553-.405-7.29-1.778-7.29-7.908 0-1.747.626-3.174 1.65-4.295-.166-.403-.714-2.03.155-4.234 0 0 1.344-.43 4.4 1.64 1.277-.356 2.646-.533 4.006-.54 1.36.006 2.73.184 4.01.54 3.053-2.07 4.394-1.64 4.394-1.64.87 2.203.323 3.83.157 4.233 1.027 1.12 1.648 2.548 1.648 4.295 0 6.145-3.743 7.498-7.306 7.895.574.497 1.085 1.47 1.085 2.963 0 2.14-.02 3.864-.02 4.39 0 .427.29.926 1.1.77C27.42 29.455 32 23.46 32 16.395c0-8.838-7.164-16-16-16z">
+                    </path>
+                </svg>
+            </div>
+            <div class="social">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32">
+                    <path fill="#fff"
+                        d="M29.555 11.5l-14-9.332c-.336-.224-.774-.224-1.11 0l-14 9.333c-.277.186-.444.5-.444.833v9.333c0 .334.168.647.446.832l14 9.333c.168.113.36.17.555.17s.388-.057.556-.17l14-9.332c.278-.185.445-.498.445-.832v-9.333c0-.334-.166-.647-.444-.832zM15 20.466L9.803 17 15 13.535 20.197 17 15 20.465zm1-8.667v-6.93l11.197 7.465L22 15.798l-6-4zm-2 0l-6 4-5.197-3.465L14 4.868v6.93zM6.197 17L2 19.798v-5.596L6.197 17zM8 18.202l6 4v6.93L2.803 21.667 8 18.202zm8 4l6-4 5.197 3.465L16 29.132v-6.93zM23.803 17L28 14.202v5.596L23.803 17z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+
+        <script src="particles.js/particles.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'particles.js/particles.json');
+
+            const triggers = document.querySelectorAll('.social');
+            const highlight = document.createElement('span');
+            highlight.classList.add('highlight');
+            highlight.classList.add('shadow-longer');
+            document.body.appendChild(highlight);
+
+
+            highlight.style.width = `${triggers[0].getBoundingClientRect().width}px`;
+            highlight.style.height = `${triggers[0].getBoundingClientRect().height}px`;
+            highlight.style.transform = `translate(${triggers[0].getBoundingClientRect().x}px, ${triggers[0].getBoundingClientRect().y}px)`;
+
+            function highlightSocial(e) {
+                const linkCoords = this.getBoundingClientRect();
+
+                const coords = {
+                    width: linkCoords.width,
+                    height: linkCoords.height,
+                    x: linkCoords.x + window.scrollX,
+                    y: linkCoords.y + window.scrollY
+                }
+
+                highlight.style.opacity = 1;
+                highlight.style.width = `${coords.width}px`;
+                highlight.style.height = `${coords.height}px`;
+                highlight.style.transform = `translate(${coords.x}px, ${coords.y}px)`;
+            }
+
+            triggers.forEach(trigger => trigger.addEventListener('mouseenter', highlightSocial));
+            triggers.forEach(trigger => trigger.addEventListener('mouseleave', () => {
+                highlight.style.opacity = 0;
+            }));
+        </script>
+    </body>
+
+</html>
