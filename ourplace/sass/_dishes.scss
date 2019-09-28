@@ -1,0 +1,33 @@
+.site--dishes {
+  margin-top: 5rem;
+}
+
+.items {
+  height: 35rem;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  will-change: transform;
+  position: relative;
+  font-size: 0;
+  display: inline-flex;
+
+  margin-top: 10rem;
+}
+
+.item {
+  min-width: 32.5rem;
+  min-height: 32.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:nth-child(9n+1) { background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/22360006_1_800x.jpg?v=1567472303) center/cover;}
+.item:nth-child(9n+2) { background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/SkilletDemo_0403_800x.jpg?v=1567541749) center/cover;}
+.item:nth-child(9n+3) { background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/Skillet_0180_800x.jpg?v=1567472416) center/cover;}
+.item:nth-child(9n+4) { background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/Skillet_0224_800x.jpg?v=1567472438) center/cover;}
+.item:nth-child(9n+5) { background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/SkilletDemo_0342_800x.jpg?v=1567541734) center/cover;}
+.item:nth-child(9n+6) { background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/PlateDemo_0421_800x.jpg?v=1567472475) center/cover;}
+.item:nth-child(9n+7) { background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/SkilletDemo_0251_be3edbda-c18d-47b0-8626-cb9e51cf49ba_800x.jpg?v=1567541851) center/cover;}

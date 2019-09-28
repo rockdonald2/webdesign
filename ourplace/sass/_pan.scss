@@ -1,0 +1,132 @@
+.site--pan {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 70rem;
+  margin: 5rem 0;
+}
+
+.pan {
+  &--left {
+    flex: 1;
+    height: 100%;
+    position: relative;
+
+    .intro {
+      margin: 15rem 0 5rem 0;
+
+      @include respond(968px) {
+        margin: 5rem 0;
+      }
+    }
+
+    .btn {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    &:hover {
+      .btn {
+        opacity: 1;
+      }
+    }
+
+    @include respond(968px) {
+      .header {
+        padding: 1rem;
+      }
+    }
+  }
+
+  &--right {
+    flex: 1;
+    height: 100%;
+    background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/home-panfeature_75c042db-bb51-4541-bf9c-cd8c9d904618_2000x.jpg?v=1568231639) center/cover;
+  }
+
+  @include respond(968px) {
+    &--right {
+      display: none;
+    }
+  }
+}
+
+.colors {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  bottom: 5%;
+  align-items: center;
+  justify-content: center;
+
+  .color {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  span:nth-child(1) {
+    background-color: #F8CDBC;
+  }
+
+  span:nth-child(2) {
+    background-color: #C0B9A0;
+  }
+
+  span:nth-child(3) {
+    background-color: #595752;
+  }
+}
+
+.first {
+  .pan {
+    &--left {
+      background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/pan-spice_ee30148c-b1c5-40a0-a218-4fe722823615_2000x.jpg?v=1568231652) center/cover;
+    }
+  }
+
+  .colors {
+    span:nth-child(1) {
+      border: 2px solid #fff;
+    }
+  }
+}
+
+.second {
+  .pan {
+    &--left {
+      background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/pan-smoke_c43b7adb-4541-4b12-aa2b-35c25816236d_2000x.jpg?v=1568231663) center/cover;
+    }
+  }
+
+  .colors {
+    span:nth-child(2) {
+      border: 2px solid #fff;
+    }
+  }
+}
+
+.third {
+  .pan {
+    &--left {
+      background: url(https://cdn.shopify.com/s/files/1/0024/4137/9915/files/pan-char_1de42606-2726-4cad-adb0-9eac01f28e76_2000x.jpg?v=1568231672) center/cover;
+    }
+  }
+
+  .colors {
+    span:nth-child(3) {
+      border: 2px solid #fff;
+    }
+  }
+}
+
