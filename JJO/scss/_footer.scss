@@ -1,0 +1,36 @@
+.footer {
+    margin: 2.5rem 25%;
+
+    @include responsive(1100px) {
+        margin: 2.5rem 15%;
+    }
+
+    @include responsive(700px) {
+        margin: 2.5rem 5%;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-bottom: 3rem;
+    }
+
+    &__link {
+        color: rgba($black-color, .6);
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding: 1rem;
+        transition: all .3s;
+
+        &:hover,
+        &:focus {
+            color: rgba($black-color, 1);
+        }
+    }
+}

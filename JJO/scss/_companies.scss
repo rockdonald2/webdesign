@@ -1,0 +1,85 @@
+.companies {
+    padding: 0 5%;
+
+    &__top {
+        margin-bottom: 2.5rem;
+    }
+
+    &__bottom {
+        .flickity-button {
+            border: none;
+            padding: .8rem 2rem;
+            border-radius: 50%;
+            background-color: $select-color;
+            color: $select-color;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all .3s;
+
+            color: $white-color;
+            box-shadow: $cta-color 0 3px 17px;
+
+            &:hover,
+            &:focus {
+                background-color: $white-color;
+                color: $select-color;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 4rem;
+    }
+}
+
+.circle {
+    width: 15rem;
+    height: 12.5rem;
+    cursor: pointer;
+
+    &[aria-hidden="true"] {
+        opacity: .5;
+    }
+
+    &__bubble {
+        border: 1px solid rgba($black-color, .5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        border-radius: 50%;
+        width: 7.5rem;
+        height: 7.5rem;
+        margin: 1rem auto 0 auto;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            color: rgba($black-color, .5);
+        }
+    }
+
+    &__label {
+        margin-top: 1rem;
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &:hover,
+    &:focus {
+        .circle {
+            &__bubble {
+                border: 1px solid $select-color;
+
+                svg {
+                    color: $select-color;
+                }
+            }
+
+            &__label {
+                color: $select-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.offers {
+    padding: 5rem 5%;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.5rem;
+
+        @include responsive(600px) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        font-size: 4rem;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        color: $select-color;
+        text-decoration: none;
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-left: 1rem;
+            transition: all .3s;
+        }
+
+        &:hover,
+        &:focus {
+            svg {
+                transform: translateX(.5rem);
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+
+        @include responsive(1100px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.offer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, -webkit-min-content);
+    grid-template-rows: repeat(4, min-content);
+    align-items: center;
+
+    &:not(:first-of-type) {
+        margin-left: 1.5rem;
+        padding-left: 3rem;
+        border-left: 2px solid rgba($black-color, .15);
+
+        @include responsive(1100px) {
+            margin-left: 0;
+            padding-left: 0;
+            border-left: none;
+
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 2px solid rgba($black-color, .15);
+        }
+    }
+
+    &__pos {
+        grid-column: 1 / 4;
+        grid-row: 1 / 1;
+        font-size: 2rem;
+        color: $select-color;
+        margin-bottom: .5rem;
+    }
+
+    &__time {
+        grid-column: 4 / -1;
+        grid-row: 1 / 1;
+        font-size: 1.4rem;
+        opacity: .75;
+        text-align: center;
+
+        @include responsive(1100px) {
+            text-align: right;
+        }
+    }
+
+    &__info {
+        grid-column: 1 / 4;
+        grid-row: 2 / 2;
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__company {
+        font-weight: 600;
+        margin-right: 1rem;
+    }
+
+    &__location {
+        opacity: .85;
+    }
+
+    &__description {
+        grid-column: 1 / -2;
+        grid-row: 3 / -1;
+        font-size: 1.6rem;
+        opacity: .85;
+    }
+
+    &__btn {
+        grid-row: 4 / -1;
+        justify-self: center;
+        
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+        @include responsive(1100px) {
+            justify-self: end;
+        }
+    }
+}

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>JJO</title>
+        <link rel="stylesheet"
+            href="css/style.css">
+        <link rel="stylesheet"
+            href="https://unpkg.com/flickity@2.2.1/dist/flickity.css">
+    </head>
+
+    <body>
+        <!-- this navigation will appear for mobile devices -->
+        <section class="navigation">
+            <input type="checkbox"
+                class="navigation__checkbox"
+                id="navi-toggle">
+            <label for="navi-toggle"
+                class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link">Discounts</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link">About Us</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link">FAQ</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link">Blog</a></li>
+                    <li class="navigation__item"><button class="btn btn__nav">Login</button></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- header -->
+        <header class="header">
+            <div class="header__left">
+                <h1 class="header__logo">JJO</h1>
+            </div>
+            <div class="header__right">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#"
+                            class="header__link">Discounts</a></li>
+                    <li class="header__item"><a href="#"
+                            class="header__link">About Us</a></li>
+                    <li class="header__item"><a href="#"
+                            class="header__link">FAQ</a></li>
+                    <li class="header__item"><a href="#"
+                            class="header__link">Blog</a></li>
+                    <li class="header__item"><button class="btn btn__cta">Login</button></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- hero -->
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">
+                    Juniors make IT work
+                </h1>
+                <p class="hero__msg">
+                    Hire and invest in highly skilled juniors now
+                </p>
+                <button class="btn btn__cta">Post Offer Now</button>
+            </div>
+        </section>
+
+        <!-- offers -->
+        <section class="offers">
+            <div class="offers__top">
+                <h2 class="offers__title">Newest Job Offers</h2>
+                <a href="#"
+                    class="offers__link">View all job offers <svg xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg></a>
+            </div>
+            <div class="offers__bottom">
+                <div class="offer">
+                    <h4 class="offer__pos">Junior Java Developer</h4>
+                    <p class="offer__time">2 hours ago</p>
+                    <div class="offer__info">
+                        <p class="offer__company">PickSaaS</p>
+                        <p class="offer__location">Wroclaw, Polska</p>
+                    </div>
+                    <p class="offer__description">I am currently looking for a Java Developer. Project for Public Sector Location:
+                        Wrocław (during the pandemic remote work)
+                        $ up to PLN 550 net / MD B2B</p>
+                    <button class="btn btn__cta offer__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="offer">
+                    <h4 class="offer__pos">Junior Project Manager</h4>
+                    <p class="offer__time">3 hours ago</p>
+                    <div class="offer__info">
+                        <p class="offer__company">Frontkom</p>
+                        <p class="offer__location">Lublin, Polska</p>
+                    </div>
+                    <p class="offer__description">Join us in the Lublin office to build innovative long-term projects. Exciting
+                        international clients and partners and a work environment focused on learning and growth awaits you!</p>
+                    <button class="btn btn__cta offer__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="offer">
+                    <h4 class="offer__pos">Junior Project Manager</h4>
+                    <p class="offer__time">A day ago</p>
+                    <div class="offer__info">
+                        <p class="offer__company">Frontkom</p>
+                        <p class="offer__location">Lublin, Polska</p>
+                    </div>
+                    <p class="offer__description">I am currently looking for a Junior Porject Manager. Project for Public Sector
+                        Location:
+                        Wrocław (during the pandemic remote work)
+                        $ up to PLN 550 net / MD B2B</p>
+                    <button class="btn btn__cta offer__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- companies -->
+        <section class="companies">
+            <div class="companies__top">
+                <h2 class="offers__title">Featured Companies</h2>
+            </div>
+            <div class="companies__bottom gallery js-flickity"
+                data-flickity-options='{ "wrapAround": true, "autoPlay": true, "pageDots": false, "groupCells": true }'>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        Seargin
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        DEX Ventures
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        NBC
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        SVT SP Zoo
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        DG Tech
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        PickSaaS
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        BlackRose
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        Frontkom
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+                <div class="circle gallery-cell">
+                    <div class="circle__bubble">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="circle__label">
+                        GrandParade
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- subscribe -->
+        <section class="subscribe">
+            <div class="subscribe__container">
+                <h2 class="subscribe__title">Receive new job offers</h2>
+                <p class="subscribe__msg">Want to know as soon as a new job offer is posted on our website? Subscribe to our
+                    weekly job offer digest</p>
+                <form action="#"
+                    class="subscribe__form">
+                    <input type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter e-mail address...">
+                    <input type="submit"
+                        value="Subscribe"
+                        class="btn btn__cta">
+                </form>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#"
+                        class="footer__link">Job Offers</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">Companies</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">Discounts</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">About Us</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">Juniors</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">FAQ</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">Blog</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">Teams</a></li>
+                <li class="footer__item"><a href="#"
+                        class="footer__link">Privacy Policy</a></li>
+            </ul>
+        </footer>
+
+        <script src="https://unpkg.com/flickity@2.2.1/dist/flickity.pkgd.min.js"
+            defer></script>
+        <script src="js/navbar.js"
+            defer></script>
+    </body>
+
+</html>

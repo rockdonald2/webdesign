@@ -1,0 +1,73 @@
+.subscribe {
+    margin: 5rem 5%;
+    background: linear-gradient(rgba($black-color, .45), rgba($black-color, .75)), url("../img/Newsletter-image.png"),
+    $black-color;
+    background-size: cover;
+    background-position: center right;
+    height: 32.5rem;
+    position: relative;
+    color: $white-color;
+    border-radius: 5px;
+
+    @include responsive(500px) {
+        height: 50rem;
+    }
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+
+        @include responsive(1100px) {
+            left: 0;
+            width: 100%;
+            padding: 5rem;
+        }
+    }
+
+    &__title {
+        font-size: 4rem;
+        margin-bottom: .5rem;
+    }
+
+    &__msg {
+        font-size: 1.8rem;
+        max-width: 60%;
+        margin-bottom: 2rem;
+        opacity: .75;
+
+        @include responsive(1100px) {
+            max-width: unset;
+        }
+    }
+
+    &__form {
+        input[type="email"],
+        input[type="submit"] {
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input[type="email"] {
+            width: 40%;
+            margin-right: 2rem;
+            font-size: 1.8rem;
+
+            @include responsive(1100px) {
+                width: unset;
+            }
+        }
+
+        @include responsive(450px) {
+            display: flex;
+            flex-direction: column;
+
+            input[type="email"] {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
